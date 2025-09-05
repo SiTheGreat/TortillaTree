@@ -1,0 +1,83 @@
+{
+
+	"Format": "2.0.0",
+
+	// Content //////////////////////////////////////////////////////////
+
+	"Changes": [
+
+		// Tree Stages
+		{
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/Tree",
+			"FromFile": "TortillaTreeStages.png"
+		},
+		// Tree Seed
+		{
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/Seed",
+			"FromFile": "TortillaTreeSeed.png"
+		},
+
+		// Tree Seed Object
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_tortillatree": {
+					"Name": "{{ModId}}_tortillatree",
+					"DisplayName": "{{i18n:Si.seed.name}}",
+					"Description": "{{i18n:Si.seed.descrip}}",
+					"Texture": "Mods/{{ModId}}/Seed",
+					"Type": "Basic",
+					"Category": -74,
+					"Price": 500,
+					"SpriteIndex": 0,
+					"EdibleIsDrink": false,
+				}
+			}
+		},
+
+		// Add tree seed to Krobus shop
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "ShadowShop", "Items" ],
+			"Entries":{
+				"{{ModId}}_KrobusTortillaTreeSeed": {
+					"ItemId": "(O){{ModId}}_tortillatree",
+				},
+			},
+		},
+
+		// Fruit Tree
+		{
+			"Action": "EditData",
+			"Target": "Data/FruitTrees",
+			"Entries": {
+				"{{ModId}}_tortillatree": {
+					"DisplayName": "{{i18n:Si.tree.name}}",
+					"Texture": "Mods/{{ModId}}/Tree",
+					"TextureSpriteRow": 0,
+					"Seasons": [
+						"Spring",
+						"Summer",
+						"Fall",
+						"Winter",
+					],
+					"Fruit": [
+						{
+							"Id": "Default",
+							"ItemId": "(O)229",
+							"Chance": 1.0,
+						},
+					],
+				}
+			}
+		},
+
+	]
+
+	// End //////////////////////////////////////////////////////////
+
+}
