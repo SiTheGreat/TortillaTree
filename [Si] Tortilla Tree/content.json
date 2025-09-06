@@ -76,6 +76,18 @@
 			}
 		},
 
+		// Book Collecting Crossover Book
+
+		{
+			"Action": "Include",
+			"FromFile": "TortillaBook.json",
+			"When": {
+				"HasMod: |contains=Si.BC": true,
+				"HasWalletItem |contains=MagnifyingGlass": true,
+				"HasWalletItem |contains=BearsKnowledge": true,
+			}
+		},
+
 	]
 
 	// End //////////////////////////////////////////////////////////
