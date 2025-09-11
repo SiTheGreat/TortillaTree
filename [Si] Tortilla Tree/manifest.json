@@ -2,7 +2,7 @@
 	"Name": "[Si] Tortilla Tree",
 	"Author": "SiTheGreat",
 	"Description": "And they say tortillas don't grow on trees...",
-	"Version": "1.0.0",
+	"Version": "1.1.0",
 	"UniqueID": "Si.TortillaTree",
 	"UpdateKeys": [ "Nexus:37308" ],
 	"ContentPackFor": {
